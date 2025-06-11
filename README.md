@@ -211,3 +211,54 @@ git add .
 git commit
 git push
 ```
+
+# Git 으로 브랜치 관리하기
+
+## Branch 란?
+
+- 개발에서 구현해야 하는 각각의 기능이 있습니다.
+- 하나의 기능을 구현 완료하였다면 소스를 버전으로 보관하는 것.
+- 다음 기능을 구현한다면 새로운 소스 버전을 만들어서 진행하는 것.
+
+## Branch 초기 이름 셋팅
+
+```bash
+git config --global init.defaultBranch main
+```
+
+## Branch 생성하는 법
+
+```bash
+git branch 브랜치명
+git branch trip
+```
+
+## Branch 목록 보는 법
+
+```bash
+git branch
+```
+
+## 원하는 Branch 로 이동하는 법
+
+```bash
+git switch 브랜치명
+git switch trip
+```
+
+## 원하는 Branch 삭제하는 법
+
+```bash
+git branch -d 브랜치명
+
+git branch   // 목록 필수 확인
+git switch main  // 다른 브랜치로 이동
+
+git branch -d trip // 삭제 실습
+```
+
+## 작업이 완료되면 Branch 합치기
+
+```bash
+git merge 대상브랜치이름
+```
