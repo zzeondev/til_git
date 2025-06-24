@@ -263,6 +263,15 @@ git merge 대상브랜치이름
 git merge trip
 ```
 
+## `깃허브 브랜치 삭제`하기(상당히 조심하셔야 해요)
+
+```bash
+git push 리모트별칭 --delete 브랜치명
+
+git push origin -d daejun
+git push origin --delete jeju
+```
+
 # Git 커밋 관리하기
 
 ## 1. 바로 이전 커밋 내용 수정하기
@@ -357,4 +366,34 @@ git push origin 브랜치명 --force
 
 ```bash
 git push origin 브랜치명 --force
+```
+
+## 4. Clone 하기
+
+### 4.1. https 로 클론하기
+
+- `.` 을 띄워쓰기 해주시면 폴더 생성없이 Clone 됩니다.
+
+```bash
+git clone 깃허브주소 .     엔터
+```
+
+### 4.2. 깃허브 `특정 브랜치` 클론하기
+
+- 이미 특정 저장소를 클론을 한 상태에서 브랜치를 가져오고 싶다면
+
+```bash
+git fetch 리모트별칭 브랜치명
+git checkout 브랜치명
+
+git fetch origin jeju       엔터
+git checkout jeju       엔터
+```
+
+- Clone 과 함께 동시에 브랜치 지정하여 Clone 하기
+
+```bash
+git clone -b 브랜치명 --single-branch https주소 .
+
+git clone -b jeju --single-branch https~ .
 ```
