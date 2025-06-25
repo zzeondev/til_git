@@ -397,3 +397,82 @@ git clone -b 브랜치명 --single-branch https주소 .
 
 git clone -b jeju --single-branch https~ .
 ```
+
+## 5. 깃허브 협업 과정
+
+- 팀장(깃허브 관리자)과 팀원(fork진행)으로 구성권장
+
+### 5.1. 1번 과정
+
+- 팀장 : GitHub 저장소 프로젝트 생성 진행
+- 팀장 : PC 에 소스 프로젝트 폴더 만듦
+- 팀장 : 프로젝트 폴더에 README.md 파일 만듦
+- 팀장 : 프로젝트 기본 구조를 생성 및 셋팅합니다.
+- 팀장 : `git init` 초기화
+- 팀장 : `git add remote origin 주소`
+- 팀장 : `git add .`
+- 팀장 : `git commit` 내용은 자유롭게
+- 팀장 : `git push origin main`
+- 팀장 : 깃허브 주소를 공유하시면서 `fork 받으세요` (메신저는 Slack 추천)
+
+### 5.2. 2번 과정
+
+- 팀원 : 깃허브 주소로 접근 후 `fork` 버튼을 눌러서 깃허브 프로젝트 복사
+- 팀원 : 본인의 깃허브로 이동함.
+- 팀원 : 본인의 `깃허브 주소를 미리 파악`해 둠.
+- 팀원 : PC 에 폴더 생성후 VSCode 등록
+- 팀원 : `git clone 주소 .` (띄어쓰기 조심)
+
+### 5.3. 3번 과정
+
+- 공통 : `git branch 이름`
+- 공통 : `git switch 이름`
+- 공통 : 각자 역할에 맞게 작업 진행
+- 공통 : `git add .`
+- 공통 : `git commit` 메세지를 컨벤션 지키기
+- 공통 : `git push origin 이름`
+
+### 5.4. 4번 과정
+
+- 팀원 : 각자 `Pull Request` 를 작성합니다.
+- 팀원 : 팀장에게 PR 보냈음을 알린다. (Slack 추천)
+- 팀원 : 대기함.
+
+### 5.5 5번 과정
+
+- 팀장 : 본인이 본인에게 `Pull Reques` 를 작성합니다.
+
+### 5.6. 6번 과정
+
+- 팀장 : PR 을 보고 소스를 보고 Conflict 가 발생하면 팀원 호출
+- 팀장 : 꼭 칭찬해 주세요.
+- 위 과정 반복해서 소스를 전체 main 에 merge 함
+
+### 5.7. 7번 과정 : main 소스 Synch 요청
+
+- 팀장 : `main sync` 해주세요. 메세지 보내기
+- 팀원 : 반드시 main 에서 `sync > update` 진행함.
+
+### 5.8. 8번 과정 : 재작업 반복
+
+- 팀원 : `git switch main`
+- 팀원 : `git fetch`
+- 팀원 : `git pull`
+- 팀원 : `git branch -d 이름`
+- 팀원 : `git push origin --delete 이름`
+- 팀원 : `git branch 이름`
+- 팀원 : `git switch 이름`
+
+### 5.8. 9번 과정 : 재작업 반복
+
+- 팀장 : `git switch main`
+- 팀장 : `git fetch`
+- 팀장 : `git pull`
+
+- 팀장 : 가끔 `소스 오류` 또는 `최신 내용이 안나오는 경우` 존재
+- 팀장 : `git merge origin/main`
+
+- 팀장 : `git branch -d 이름`
+- 팀장 : `git push origin --delete 이름`
+- 팀장 : `git branch 이름`
+- 팀장 : `git switch 이름`
