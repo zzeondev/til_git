@@ -34,7 +34,7 @@ git --version
 - 기본 브랜치명을 `main`으로 설정하기(초기 설치 시 master로 되어있음)
 
 ```bash
-git config --global init.defaaultBranch main
+git config --global init.defaultBranch main
 ```
 
 - Enter키를 통일시킴(맥, 윈도우, 리눅스가 Enter키, 줄 변경이 달리 처림됨)
